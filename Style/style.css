@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    width: 1920px;
+    height: 1080px;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgb(141, 0, 0), black);
+}
+.container .box {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.container .box .red {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(red, black);
+    box-shadow: 0 0 10px red;
+    border-top-right-radius: 1500px;
+    border-bottom-right-radius: 1500px;
+    z-index: 1;
+    transform-origin: left;
+    animation: red 5s forwards infinite;
+}
+@keyframes red {
+    35%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    85%{transform: rotate(180deg);}
+    100%{transform: rotate(0deg);}
+} 
+.container .box .white {
+    position: absolute;
+    top: 45px;
+    right: 50px;
+    width: 100px;
+    height: 210px;
+    z-index: 2;
+    box-shadow: 0 0 10px white;
+    background:linear-gradient(to bottom, white 50%, #ccc 50%);
+    border-top-right-radius: 1500px;
+    border-bottom-right-radius: 1500px;
+    transform-origin: left;
+    animation: white 5s forwards infinite;
+}
+@keyframes white {
+    35%{transform: rotate(0deg);}
+    50%{transform: rotate(-180deg);}
+    85%{transform: rotate(-180deg);}
+    100%{transform: rotate(0deg);}
+} 
+.container .box .black {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    box-shadow: 0 0 10px black; 
+    border-radius: 60px;
+    top: 90px;
+    right: 90px;
+    z-index: 3;
+    animation: black 5s forwards infinite;
+}
+@keyframes black {
+    35%{transform: translate(0px);}
+    50%{transform: translate(-60px);}
+    85%{transform: translate(-60px);}
+    100%{transform: translate(0px);}
+} 
+.container .box .orange1 {
+    position: absolute;
+    right: 150px;
+    top: 45px;
+    width: 105px;
+    height: 105px;
+    background-color: orange;
+    box-shadow: 0 0 10px orange;
+    border-top-left-radius: 1500px;
+    z-index: 4;
+    animation: orange1 5s forwards infinite;
+    transform-origin: bottom right;
+}
+@keyframes orange1 {
+    35%{transform: rotate(0deg);}
+    50%{transform: rotate(90deg);}
+    85%{transform: rotate(90deg);}
+    100%{transform: rotate(0deg);}
+} 
+.container .box .orange2 {
+    position: absolute;
+    right: 150px;
+    top: 149px;
+    width: 50px;
+    height: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0 0 10px rgb(244, 122, 0);
+    background-color: rgb(244, 122, 0);
+    animation: orange2 5s forwards infinite;
+    transform-origin: top right;
+}
+@keyframes orange2 {
+    35%{transform: rotate(0deg);}
+    50%{transform: rotate(-90deg);}
+    85%{transform: rotate(-90deg);}
+    100%{transform: rotate(0deg);}
+} 
